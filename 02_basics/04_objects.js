@@ -61,14 +61,56 @@ const user = [
     },
     
 ]
-console.log(tinderUser)
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
-console.log(regularUser)
-console.log(Object.keys(regularUser))
-console.log(Object.values(regularUser))
-console.log(Object.entries(regularUser))
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
+// console.log(regularUser)
+// console.log(Object.keys(regularUser))
+// console.log(Object.values(regularUser))
+// console.log(Object.entries(regularUser))
+
+// console.log(user[0].email)
+// console.log(user[0].id)
+// console.log(user[1].name)
+// console.log(user[1].email2)
+// console.log(user[2].state)
+// console.log(user[2].Pincode)
 
 // console.log(tinderUser.hasOwnProperty('isLoggedin'))
 // console.log(tinderUser.hasOwnProperty('isLogged'))
+
+const course ={
+    coursename: "Js Hindi",
+    price: 999,
+    courseInstructor:"Nikhil"
+}
+
+// course.courseInstructor
+// console.log(course.courseInstructor)
+
+const{courseInstructor} = course
+console.log(courseInstructor)
+const{courseInstructor: instructor} = course //de structuring Object
+console.log(instructor);
+
+//this this is for react destructuring 
+// const navbar = (propes.company) => {}
+
+// navbar(companyname = "hitesh")
+// const navbar = ({company}) => {}
+
+// navbar(companyname = "hitesh")
+
+
+// {
+//     "name": "nikhil",
+//     "coursename": "Js in hindi",
+//     "price": "free"
+// } json example
+
+[
+    {},
+    {},
+    {},
+]
