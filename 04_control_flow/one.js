@@ -46,11 +46,11 @@ const loggedInFromEmail = true
 
 if (userLoggedIn && debitCard && 2==2) {
     console.log("Allow to buy course");
-}
+}                                                    //&& every condition must be true to exicute code inside if{}
 
 if (loggedInFromGoogle || loggedInFromEmail) {
     console.log("User logged in");
-}
+}                                                     //|| any one condition must be true to exicute that code inside if{}
 if (loggedInFromGoogle ) {
     console.log("User logged in from google");
 } else if(loggedInFromEmail){
