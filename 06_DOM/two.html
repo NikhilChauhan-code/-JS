@@ -7,6 +7,7 @@
 </head>
 <body style="background-color: rgb(58, 54, 54); color: antiquewhite;">
     <div class="parent">
+          <!-- this is a comment -->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
@@ -35,7 +36,8 @@
 
     console.log("NODES: ", parent.childNodes);
     //result of NODES = NODES:  NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
-    // this "text" thing is the space between one div and another 
+    // this "text" thing is the space between one div and another even if you add comment result will be this
+    //NODES:  NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text] 
   
 </script>
 </html>
