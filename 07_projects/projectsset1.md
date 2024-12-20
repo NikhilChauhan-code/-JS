@@ -12,8 +12,8 @@ const body = document.querySelector('body')
 Buttons.forEach(function(button){
     console.log(button)
     button.addEventListener('click', function(e){
-        console.log(e)
-        console.log(e.target)
+        // console.log(e)
+        // console.log(e.target)
         if (e.target.id === 'grey') {
             body.style.backgroundColor = e.target.id;
           }
@@ -30,79 +30,37 @@ Buttons.forEach(function(button){
 
     })      
 })
+ 
 
-style.css 
+```
+## Project 2
 
-html {
-    margin: 0;
-  }
-  
-  span {
-    display: block;
-  }
-  .canvas {
-    margin: 100px auto 100px;
-    width: 80%;
-    text-align: center;
-    /* background-color: black; */
-  }
-  
-  .button {
-    width: 100px;
-    height: 100px;
-    border: solid black 2px;
-    border-radius: 50px;
-    display: inline-block;
-  }
-  .button:hover {
-    /* cursor: pointer; */
-    /* color: white; */
-    border-radius: 20px;
-    rotate: 540deg;
+``` javascript
+const form = document.querySelector('form');
 
-    transition: 200ms;
-  }
-  
-  #grey {
-    background: grey;
-  }
-  
-  #white {
-    background: white;
-  }
-  #blue {
-    background: blue;
-  }
-  #yellow {
-    background: yellow;
-  }
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+ const height = parseInt(document.querySelector('#height').value);
+ const weight =  parseInt(document.querySelector('#weight').value);
+ const result = document.querySelector('#results');
 
-  HTML
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-   
-    <title>JavaScript Background Color Switcher</title>
-  </head>
-  <body>
-  
-    <div class="canvas">
-     
-      <h1>Color Scheme Switcher</h1>
-      <span class="button" id="grey"></span>
-      <span class="button" id="white"></span>
-      <span class="button" id="blue"></span>
-      <span class="button" id="yellow"></span>
-      <h2>
-        Try clicking on one of the colors above
-        <span>to change the background color of this page!</span>
-      </h2>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+if( height === '' || height <= 0 || isNaN(height)) {
+result.innerHTML =`enter valid height ${height}`
+} else if ( weight === '' || weight <= 0 || isNaN(weight)){
+  result.innerHTML =`enter valid weight ${weight}`
+} else {
+   const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+   result.innerHTML = `<span> ${bmi}</span>`;
+}
+const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+let weightCategory;
+if (bmi < 18.6) {
+    weightCategory = 'Under Weight';
+} else if (bmi >= 18.6 && bmi <= 24.9) {
+    weightCategory = 'Normal Range';
+} else {
+    weightCategory = 'Overweight';
+}
+result.innerHTML = `<span>BMI: ${bmi}</span><br>Weight Category: ${weightCategory}`;
 
+});
