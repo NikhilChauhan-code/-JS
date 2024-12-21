@@ -64,3 +64,19 @@ if (bmi < 18.6) {
 result.innerHTML = `<span>BMI: ${bmi}</span><br>Weight Category: ${weightCategory}`;
 
 });
+```
+
+``` javascript
+
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
+
+
